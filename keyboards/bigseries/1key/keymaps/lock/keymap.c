@@ -20,7 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 LAYOUT(
-    LGUI(KC_L)),
+    LCTL(LGUI(KC_Q))),
 
 
 };
@@ -36,8 +36,8 @@ void matrix_init_user(void) {
       rgblight_init();
       // None of the subsequent operations take effect if not enabled
       rgblight_enable();
-      rgblight_sethsv(0,0,255);
-      rgblight_mode(7);
+      rgblight_sethsv(25, 200, 200);
+      rgblight_mode(1);
       initialized = 1;
     }
 }
